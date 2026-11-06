@@ -1,0 +1,114 @@
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Manrope Variable', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --color-faro-bg: #121316;
+  --color-faro-panel: #18191d;
+  --color-faro-card: #1c1e24;
+  --color-faro-gold: #f5ba38;
+  --color-faro-gold-hover: #e5a822;
+  --color-faro-border: rgba(212, 160, 60, 0.25);
+  --color-faro-muted: #8b8f9a;
+}
+
+@layer base {
+  body {
+    background-color: #121316;
+    color: #e6e8ec;
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  /* Mangled classes for Faro Casino layout */
+  .fr7x-layout {
+    display: flex;
+    min-height: 100vh;
+    background-color: #121316;
+    position: relative;
+  }
+
+  .fr7x-sidebar {
+    width: 250px;
+    flex-shrink: 0;
+    background-color: #141519;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    padding: 16px 14px;
+    z-index: 40;
+  }
+
+  .fr7x-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle at 70% 10%, rgba(245, 186, 56, 0.04) 0%, transparent 50%), #121316;
+  }
+
+  .fr7x-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 24px;
+    background-color: #121316;
+    gap: 12px;
+  }
+
+  .fr7x-gold-card {
+    border: 1px solid rgba(212, 160, 60, 0.35);
+    box-shadow: 0 0 25px rgba(245, 186, 56, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .fr7x-gold-btn {
+    background: linear-gradient(135deg, #f5ba38 0%, #e2a019 100%);
+    color: #121316;
+    font-weight: 700;
+    transition: transform 0.15s ease, filter 0.15s ease;
+  }
+  .fr7x-gold-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+  .fr7x-gold-btn:active {
+    transform: translateY(0);
+  }
+
+  .fr7x-dark-btn {
+    background-color: #202227;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: background-color 0.15s ease, border-color 0.15s ease;
+  }
+  .fr7x-dark-btn:hover {
+    background-color: #282b32;
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+
+  .fr7x-nav-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 12px;
+    color: #a4a8b3;
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: all 0.15s ease;
+  }
+  .fr7x-nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.04);
+    color: #ffffff;
+  }
+
+  /* Mobile menu drawer via :target */
+  #fr7x-nav-drawer {
+    display: none;
+  }
+  #fr7x-nav-drawer:target {
+    display: flex !important;
+  }
+}
