@@ -9,6 +9,7 @@ export default function RootLayout({
   return (
     <html lang="ru" className="bg-[#121316]">
       <head>
+       <meta name="yandex-verification" content="713cad7096ae5fb4" />
         <title>Faro Casino Официальный Сайт | Фаро Казино Вход и Рабочее Зеркало Онлайн</title>
         <meta name="description" content="Faro Casino официальный сайт и актуальное рабочее зеркало на сегодня. Играйте в Фаро Казино онлайн: мгновенная регистрация, щедрые бонусы на депозит, лицензионные слоты и быстрый вывод выигрышей." />
         <link rel="canonical" href="https://farocasino36.vercel.app" />
